@@ -1,2 +1,2 @@
 Working URL of the Solution Prototype:
-  https://extraordinary-cannoli-4f051e.netlify.app/command-center
+  https://extraordinary-cannoli-4f051e.netlify.app
