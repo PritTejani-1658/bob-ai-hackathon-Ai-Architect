@@ -3,7 +3,7 @@
 ## 👥 Team
 | Field | Value |
 | --- | --- |
-| **Team Name** | AI Architects |
+| **Team Name** | AI Architect|
 | **Track** | AI / Open |
 | **Team Lead** | Aditya Amipara — [25dcs004@charusat.edu.in] |
 | **Members** | Prit Tejani, Savan Sojitra, Jahnavi Suthar |
