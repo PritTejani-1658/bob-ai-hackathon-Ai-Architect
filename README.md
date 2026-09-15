@@ -5,8 +5,8 @@
 | --- | --- |
 | **Team Name** | AI Architects |
 | **Track** | AI / Open |
-| **Team Lead** | Prit Tejani — [prittejani1658@gmail.com] |
-| **Members** | Prit Tejani |
+| **Team Lead** | Aditya Amipara — [25dcs004@charusat.edu.in] |
+| **Members** | Prit Tejani, Savan Sojitra, Jahnavi Suthar |
 
 ## 🎯 Problem Statement
 Port supervisors struggle to optimally assign vessels to berths and cranes in real-time due to cascading delays, equipment faults, and unpredictable ETAs. This port congestion leads to massive supply chain delays, increased fuel emissions from idling ships, and skyrocketing demurrage costs. The lack of predictive visibility means operators react to conflicts after they happen rather than preventing them algorithmically.
