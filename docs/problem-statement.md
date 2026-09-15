@@ -1,21 +1,11 @@
 # Problem Statement
 
-## Background
+Global supply chains rely heavily on maritime shipping, but port infrastructure often struggles to keep pace with demand. When a vessel arrives at a port, it requires a specific combination of resources: an appropriately sized berth, adequate crane operations to load/unload cargo, and precise scheduling.
 
-[Describe the broader context. What domain or industry does this problem belong to? What situation creates the problem?]
+## The Core Challenge
+Port supervisors currently manage these moving parts reactively. If a ship arrives 4 hours early, or a crane faults during a shift, it creates a cascading bottleneck.
+* **Vessels wait in anchorage**, burning excess fuel and emitting unnecessary greenhouse gases.
+* **Demurrage costs skyrocket** for shipping companies.
+* **Berths sit idle** because the next scheduled vessel isn't ready.
 
-## The Problem
-
-[State the problem clearly and specifically. Avoid vague statements like "things are slow" — instead say "Operations teams spend an average of 45 minutes per incident diagnosing pipeline failures because logs are scattered across 6 different tools."]
-
-## Who is Affected
-
-[Describe the specific user or persona experiencing this problem. Be concrete — not "developers" but "backend engineers managing CI/CD pipelines in enterprises with 50+ microservices."]
-
-## Why It Matters
-
-[What is the cost of this problem? Lost time? Revenue? Safety risk? Frustration? Quantify if possible.]
-
-## Why Existing Solutions Fall Short
-
-[Briefly explain what people currently do and why it doesn't fully solve the problem. This sets up why your solution is needed.]
+Operators lack a unified, predictive view of operations. They cannot safely experiment with "What-If" scenarios or algorithmically generate optimized reassignments to resolve conflicts before they paralyze the port.

@@ -1,49 +1,16 @@
 # Architecture
 
-## System Architecture
+Our architecture is optimized for a fast, responsive, edge-ready application using modern web technologies. For this POC, all complex scheduling algorithms run entirely in-browser, showcasing the speed and deterministic power of the engines.
 
-[Describe the overall architecture of your system. Replace the Mermaid diagram below with your actual architecture.]
+## Folder Structure (Web App Pattern)
+- \`src/frontend/\`: Contains all UI code (React Components, Tailwind Styling, Routing).
+- \`src/shared/\`: Contains all shared types, mock data, Zustand state stores, and the core operational engines (Congestion Engine, Optimization Engine, Copilot Engine).
+- \`src/backend/\`: Stubbed for this POC. In production, the shared logic would shift to Python/FastAPI microservices and IBM watsonx.
 
-```mermaid
-graph TD
-    A[User / Browser] -->|HTTP| B[Frontend - React]
-    B -->|REST API| C[Backend - FastAPI]
-    C -->|SDK| D[watsonx.ai]
-    C -->|Query| E[PostgreSQL]
-    C -->|Publish| F[Slack Webhook]
-    D -->|Inference Result| C
-```
+## Core Engines
+1. **Zustand Global Store (\`src/shared/store.ts\`)**: Maintains the single source of truth for Vessels, Berths, Cranes, and Simulator overrides.
+2. **Resource Conflict Engine (\`src/shared/services/resourceConflictEngine.ts\`)**: Continuously monitors the store for overlaps, returning a standard array of alerts.
+3. **Optimization Engine (\`src/shared/services/optimizationEngine.ts\`)**: A multi-pass scoring algorithm that evaluates unassigned and conflicted vessels and matches them to alternative berths/cranes, factoring in vessel dimensions, priority, and ETAs.
 
-## Components
-
-| Component | Technology | Responsibility |
-|---|---|---|
-| Frontend | [e.g., React 18] | [e.g., Dashboard UI, user interaction] |
-| Backend API | [e.g., FastAPI] | [e.g., Business logic, orchestration] |
-| AI / ML | [e.g., watsonx.ai] | [e.g., Anomaly scoring, classification] |
-| Database | [e.g., PostgreSQL] | [e.g., Storing pipeline events and scores] |
-| Notifications | [e.g., Slack API] | [e.g., Alerting on threshold breaches] |
-
-## Data Flow
-
-[Describe how data moves through your system from input to output.]
-
-1. [e.g., Pipeline logs are ingested via a webhook from GitHub Actions]
-2. [e.g., Logs are preprocessed and chunked into 512-token segments]
-3. [e.g., Each chunk is sent to the watsonx.ai inference endpoint]
-4. [e.g., Anomaly scores are stored in PostgreSQL]
-5. [e.g., The React dashboard polls the API every 30 seconds to refresh]
-
-## Security Considerations
-
-[Note any security decisions relevant to the architecture — even if basic.]
-
-- [e.g., API keys stored in environment variables, never committed to git]
-- [e.g., All API routes require a Bearer token]
-- [e.g., Database credentials rotated via IBM Secrets Manager]
-
-## Scalability Notes
-
-[Optional: how would this scale beyond the hackathon prototype?]
-
-[e.g., "The FastAPI backend is stateless and could be horizontally scaled behind a load balancer. The watsonx.ai calls are the bottleneck and would benefit from request batching."]
+## UI Layer
+Built with React, Vite, and Tailwind CSS to ensure a dark-mode, high-contrast visual hierarchy typical of industrial control centers. Components are highly modular and subscribe strictly to localized slices of the Zustand state to maintain 60fps performance during heavy UI updates.

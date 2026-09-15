@@ -1,121 +1,76 @@
-# 🚀 [Your Project Title Here]
-
-> ⚠️ **Replace everything in `[ ]` brackets with your actual content before submission.**
-
----
+# BoB AI Ops: Predictive Port Operations Control Centre
 
 ## 👥 Team
-
 | Field | Value |
-|---|---|
-| **Team Name** | [Your Team Name] |
-| **Track** | [AI / DevOps / Sustainability / Open] |
-| **Team Lead** | [Name] — [email@ibm.com] |
-| **Members** | [Name 1], [Name 2], [Name 3] |
-
----
+| --- | --- |
+| **Team Name** | AI Architects |
+| **Track** | AI / Open |
+| **Team Lead** | Prit Tejani — [prittejani1658@gmail.com] |
+| **Members** | Prit Tejani |
 
 ## 🎯 Problem Statement
-
-> In 2–3 sentences: What problem does your project solve? Who experiences this problem?
-
-[Describe the real-world problem your project addresses. Be specific about who the user is and what pain point they face.]
-
----
+Port supervisors struggle to optimally assign vessels to berths and cranes in real-time due to cascading delays, equipment faults, and unpredictable ETAs. This port congestion leads to massive supply chain delays, increased fuel emissions from idling ships, and skyrocketing demurrage costs. The lack of predictive visibility means operators react to conflicts after they happen rather than preventing them algorithmically.
 
 ## 💡 Solution
-
-> In 2–3 sentences: What did you build? How does it solve the problem above?
-
-[Describe your solution clearly. Explain the core mechanism — what makes it work.]
-
----
+We built a Predictive Decision-Support System that simulates port states up to 72 hours in advance and proactively identifies scheduling conflicts. By leveraging a deterministic algorithmic optimization engine, the platform automatically recommends mathematically sound reassignments (e.g., swapping berths or shifting cranes) to resolve constraints, minimize wait times, and maximize port throughput before the bottlenecks actually occur.
 
 ## ✨ Key Features
-
-- **Feature 1:** [Brief description — e.g., "Real-time anomaly detection using watsonx.ai"]
-- **Feature 2:** [Brief description]
-- **Feature 3:** [Brief description]
-- **Feature 4:** [Optional]
-- **Feature 5:** [Optional]
-
----
+- **Feature 1:** Real-Time Resource Conflict Engine — Instantly detects berth overlaps, crane shortfalls, and maintenance clashes.
+- **Feature 2:** Deterministic Algorithmic Reassignment — One-click optimization to resolve conflicts with clear "Before vs. After" impact metrics.
+- **Feature 3:** Predictive What-If Simulator — Safely test timeline manipulations (e.g., severe weather delays, crane breakdowns) without affecting the live operational state.
+- **Feature 4:** Operations Copilot — A strategic briefing layer that synthesizes real-time metrics into actionable insights for the shift supervisor.
+- **Feature 5:** 72-Hour Lookahead Planning — Visual timeline of all upcoming inbound, anchored, and moored vessels.
 
 ## 🛠️ Tech Stack
-
 | Category | Technologies |
-|---|---|
-| **Languages** | [e.g., Python, TypeScript] |
-| **Frameworks** | [e.g., FastAPI, React] |
-| **IBM Technologies** | [e.g., watsonx.ai, IBM Bob, IBM Cloud] |
-| **Databases** | [e.g., PostgreSQL, Redis] |
-| **Other** | [e.g., Docker, GitHub Actions] |
-
----
+| --- | --- |
+| **Languages** | TypeScript, HTML/CSS |
+| **Frameworks** | React, Vite, Tailwind CSS |
+| **State Management** | Zustand |
+| **Other** | Lucide-React, Recharts |
 
 ## 📁 Repository Structure
-
-```
-├── src/                  # All source code
-├── docs/                 # Written documentation
-│   ├── problem-statement.md
-│   ├── solution-overview.md
-│   ├── architecture.md
-│   └── setup-guide.md
-├── demo/                 # Demo artifacts
-│   ├── screenshots/      # App screenshots
-│   └── demo-video-link.txt  # Link to demo video
-├── presentation/         # Slide deck
-└── submission.yaml       # Structured submission metadata
-```
-
----
+\`\`\`text
+├── src/                     # All source code 
+├── docs/                    # Written documentation 
+│   ├── problem-statement.md 
+│   ├── solution-overview.md 
+│   ├── architecture.md 
+│   └── setup-guide.md 
+├── demo/                    # Demo artifacts 
+│   ├── screenshots/         # App screenshots 
+│   └── demo-video-link.txt  # Link to demo video 
+├── presentation/            # Slide deck 
+└── submission.yaml          # Structured submission metadata
+\`\`\`
 
 ## ⚡ How to Run
+Copy these exact steps from your [docs/setup-guide.md](./docs/setup-guide.md)
 
-> **Copy these exact steps from your [`docs/setup-guide.md`](docs/setup-guide.md)**
+\`\`\`bash
+# 1. Clone the repo 
+git clone https://github.com/PritTejani-1658/bob-ai-hackathon-Ai-Architect.git
+cd bob-ai-hackathon-Ai-Architect
 
-```bash
-# 1. Clone the repo
-git clone https://github.com/[your-repo].git
-cd [your-repo]
+# 2. Install dependencies 
+npm install
 
-# 2. Install dependencies
-[your install command here]
-
-# 3. Configure environment
-cp .env.example .env
-# Edit .env with your values
-
-# 4. Run the project
-[your run command here]
-```
-
----
+# 3. Run the project 
+npm run dev
+\`\`\`
 
 ## 🖥️ Demo
-
 | Artifact | Link |
-|---|---|
-| 📹 Demo Video | [See demo/demo-video-link.txt](demo/demo-video-link.txt) |
-| 🌐 Live Demo | [See demo/live-demo-url.txt](demo/live-demo-url.txt) |
-| 🖼️ Screenshots | [See demo/screenshots/](demo/screenshots/) |
-| 📊 Presentation | [See presentation/slides.pdf](presentation/) |
-
----
+| --- | --- |
+| 📹 **Demo Video** | [See demo/demo-video-link.txt](./demo/demo-video-link.txt) |
+| 🌐 **Live Demo** | [See demo/live-demo-url.txt](./demo/live-demo-url.txt) |
+| 🖼️ **Screenshots** | [See demo/screenshots/](./demo/screenshots) |
+| 📊 **Presentation** | [See presentation/slides.pdf](./presentation/slides.pdf) |
 
 ## ⚠️ Known Limitations
-
-> Be honest — judges appreciate transparency over overclaiming.
-
-- [Limitation 1: e.g., "Authentication is mocked — not production-ready"]
-- [Limitation 2: e.g., "Only tested on Chrome"]
-- [Limitation 3: e.g., "Feature X is scaffolded but not fully implemented"]
-
----
+- **Offline POC:** The application relies entirely on simulated synthetic mock data. Backend APIs are mocked via Zustand store to ensure 100% reliability during the presentation.
+- **No Production LLM Integration:** The AI/algorithmic recommendations are purely deterministic mathematical engines written in TypeScript rather than external LLM calls to prevent hallucination in critical port operations.
+- **Mocked Authentication:** Authentication and authorization layers are scaffolded/bypassed for demo purposes.
 
 ## 🏅 What We're Most Proud Of
-
-[Tell the judges what part of your submission is strongest and worth paying close attention to.]
-
----
+We are incredibly proud of the **Algorithmic Reassignment & Optimization Engine**. Rather than simply flagging problems, the application mathematically evaluates capacity constraints, ETAs, and crane availability to propose deterministic solutions. Merging this backend logic seamlessly into a gorgeous, highly-responsive "dark mode" control center UI proves that complex port operations can be managed intuitively and efficiently.
